@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Skranji:wght@400;700&family=Varela+Round&display=swap');
+
+body{
+    background-color: #A31717;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    min-width: 0;
+}
+
+.container-mayor-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.container-superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 70%;
+}
+
+.container-navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 80px;
+
+}
+
+.container-navbar a{
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+
+}
+
+.container-logo{
+    color: white; 
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    
+}
+
+.container-mayor-secundario{
+    display: flex;
+    justify-content: center;
+}
+
+.container-Hero-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    height: 455px;    
+}
+
+.contenedor-letras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.contenedor-letras h1 {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+
+}
+
+.contenedor-letras h4 {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.imagen-hero-section{
+    color: white;
+    font-family: "Inter", sans-serif;
+
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .container-mayor-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        /* border: 2px solid black; */
+    }
+    
+    .container-superior{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        width: 100%;
+        /* border: 2px solid black; */
+    }
+    
+    .container-navbar{
+        display: flex;
+        flex-direction: row;
+        margin-right: 0px;
+        position: relative; /* Para posicionar el ícono de hamburguesa */
+    
+    }
+
+/* __________________________________________________________ */
+
+    /* Oculta los enlaces en pantallas pequeñas */
+    .container-navbar a {
+        display: none;
+    }
+
+    /* Crea el ícono de hamburguesa con un pseudo-elemento */
+    .container-navbar::before {
+        content: "☰"; /* Ícono de hamburguesa */
+        font-size: 24px;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    /* Muestra los enlaces cuando se hace hover en el ícono */
+    .container-navbar:hover a {
+        display: block;
+        background-color: #A31717;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ajusta el contenedor del menú para que los enlaces se muestren en columna */
+    .container-navbar:hover {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px; /* Ajusta según la altura de tu navbar */
+        right: 0;
+        background-color: #A31717;
+        width: 150px; /* Ancho del menú desplegable */
+    }
+
+}
